@@ -1,0 +1,23 @@
+/*---------------------------banner---------------------------*/
+.banner{
+	width:100%;
+	height:450px;	
+}
+.bannerlist{
+	overflow:hidden;
+	height:450px;
+}
+.bannerlist li img{
+	width:100%;
+}
+/*---------------------------servicelist---------------------------*/
+.servicelist{
+	width:100%;	
+}
+.list-service{
+	width:1200px;
+	height:54px;	
+}
+.list-service li{
+ float:left;	
+}
