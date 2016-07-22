@@ -7,7 +7,33 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script src="js/jquery-1.12.0.js"></script>
 	<script>
-		
+		$(function(){
+			var $bannerlist = $(".bannerlist");
+			var atimer; 
+			var index = 0;
+			var len = $bannerlist.find("li").length;
+			
+			$bannerlist.on("mouseenter",function(){
+				clearInterval(timer);
+				}).on('mouseleave',function(){
+                	timer = setInterval(carousel,2000);
+            }).trigger('mouseleave');
+			function carousel(){
+                index++;
+                show();
+            }
+			function show(){
+                // 处理index值，使其实现循环轮播
+                if(index<0){
+                    index = len - 1;
+                }else if(index > len - 1){
+                    index = 0;
+                }
+                
+                $bannerlist.find('li').eq(index).show().siblings().hide();
+            }
+        });
+
 	</script>
 </head>
 <body>
@@ -46,8 +72,8 @@
         	<h2>全部商品分类</h2>
             <ul class="navlist">
             	<li><a href="#">商城首页</a></li>
-                <li><a href="#">新品上市</a></li>
-                <li><a href="#">口碑特卖</a></li>
+                <li class="newgoods"><a href="#">新品上市</a><div class="newgif"></div></li>
+                <li class="hotgoods"><a href="#">口碑特卖</a><div class="hotgif"></div></li>
                 <li><a href="#">包邮专区</a></li>
                 <li><a href="#">特惠促销</a></li>
                 <li><a href="#">旅游</a></li>
@@ -73,27 +99,38 @@
 <!--*******************************servicelist*******************************-->
 	<div class="servicelist">
     	<ul class="list-service">
-			<li>
-				<s></s>
-				<span>
-					<b>正品保证</b><p>平台信誉 品质保障</p></span>
+			<li class="bg1">
+				<div><b>正品保证</b><p>平台信誉 品质保障</p></div>
 			</li>
-			<li class="l1">
-				<s class="s1"></s>
-				<span>
-					<b>全球直供</b><p>海外货源 购物无忧</p></span>
+			<li class="bg2">
+				<div><b>全球直供</b><p>海外货源 购物无忧</p></div>
 			</li>
-			<li class="l2">
-				<s class="s2"></s>
-				<span>
-					<b>优质品牌</b><p>名品荟萃 优质大牌</p></span>
+			<li class="bg3">
+					<div><b>优质品牌</b><p>名品荟萃 优质大牌</p></div>
 			</li>
-			<li class="l3">
-				<s class="s3"></s>
-				<span>
-					<b>售后保障</b><p>专业客服 售后无忧</p></span>
+			<li class="bg4">
+				<div><b>售后保障</b><p>专业客服 售后无忧</p></div>
 			</li>
 		</ul>
     </div>
+<!--*******************************goodsList*******************************-->
+	<h2 class="newProduct">新品上架</h2>
+    <ul class="newProductList">
+    	<li class="goodslist1">
+        	<ul class="subGoodsList1">
+            	<li><div><a href="#"><img src="img/1.jpg"/></a></div><p>天福堂 甜品请竟来...</p><p>￥299.94<span>法国</span></p></li>
+                <li><div><a href="#"><img src="img/1.jpg"/></a></div><p>天福堂 甜品请竟来...</p><p>￥299.94<span>法国</span></p></li>
+                <li><div><a href="#"><img src="img/1.jpg"/></a></div><p>天福堂 甜品请竟来...</p><p>￥299.94<span>法国</span></p></li>
+                <li><div><a href="#"><img src="img/1.jpg"/></a></div><p>天福堂 甜品请竟来...</p><p>￥299.94<span>法国</span></p></li>
+                <li class="noMargin"><div><a href="#"><img src="img/1.jpg"/></a></div><p>天福堂 甜品请竟来...</p><p>￥299.94<span>法国</span></p></li>
+                <li><div><a href="#"><img src="img/1.jpg"/></a></div><p>天福堂 甜品请竟来...</p><p>￥299.94<span>法国</span></p></li>
+                <li><div><a href="#"><img src="img/1.jpg"/></a></div><p>天福堂 甜品请竟来...</p><p>￥299.94<span>法国</span></p></li>
+                <li><div><a href="#"><img src="img/1.jpg"/></a></div><p>天福堂 甜品请竟来...</p><p>￥299.94<span>法国</span></p></li>
+                <li><div><a href="#"><img src="img/1.jpg"/></a></div><p>天福堂 甜品请竟来...</p><p>￥299.94<span>法国</span></p></li>
+                <li class="noMargin><div><a href="#"><img src="img/1.jpg"/></a></div><p>天福堂 甜品请竟来...</p><p>￥299.94<span>法国</span></p></li>
+            </ul>
+        </li>
+	
+    </ul>
 </body>
 </html>
