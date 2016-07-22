@@ -55,7 +55,9 @@
 }
 
 /*---------------------------goodslist---------------------------*/
-.newProduct{
+
+/*---------------------新品上架轮播结构-----------------------*/
+.listProduct{
 	width:1180px;
 	height:36px;
 	line-height:36px;
@@ -66,31 +68,210 @@
 	color:#222222;
 	padding-left:20px;
 	position:relative;
+	font-weight:600;
 }
 .newProductList{
 	width:1200px;
 	margin:0 auto;
 	height:620px;
+	margin-top:16px;
 	overflow:hidden;	
 }
 .newProductList img{
 	width:232px;
 	height:232px;
 }
-.goodslist1{
+.goodslist{
 	width:1200px;
 	height:620px;
 	float:left;
+	overflow::hidden
 }
-.subGoodsList1 > li{
+.subGoodsList > li{
 	float:left;
 	width:232px;
 	height:300px;
-	margin-right:10px;
+	margin:0 10px 10px 0;
+	
 }
-.subGoodsList1 .noMargin{
+.subGoodsList .noMargin{
 	margin-right:0
 }
+.subGoodsList li .goodsName{
+	width:222px;
+	height:38px;
+	padding-left:10px;
+	background:url(img/franceBg.jpg) no-repeat 204px 17px #fff;
+	line-height:50px;	
+}
+.subGoodsList li .goodsName a{
+		color:#333333;
+}
+.subGoodsList li .goodsName a:hover{
+		color:#ee4242;
+}
+.subGoodsList li .goodsPrice{
+	width:222px;
+	height:30px;
+	padding-left:10px;
+	color:#ee4242;
+	line-height:20px;
+	background:#fff;
+}
+.subGoodsList li .goodsPrice .countryName{
+	height:30px;
+	margin-right:10px;
+	color:#cacae1;
+	float:right;
+}
+/*---------------------新品上架轮播-----------------------*/
+.listProductMargin{
+	margin-top:80px;
+}
+/*---------------------产品列表-----------------------*/
+.listProduct.listProductMargin span{
+	float:right;
+	line-height:30px;
+}
+.listProduct.listProductMargin span a{
+	color:#333;
+	font-size:12px;
+	font-weight:100;
+}
+.goodsData{
+	width:1200px;
+	height:500px;
+	margin:0 auto;
+	margin-top:16px;	
+}
+.goodsDataLeft{
+	float:left;
+	margin-right:4px;	
+}
+.detailList{
+	margin-top:2px;
+	height:170px;
+	width:240px;
+	padding-top:8px;
+	background:#fff;
+}
+.detailList p{
+	height:28px;
+	width:240px;
+	line-height:28px;
+}
+.detailList p a{
+	color:#333333;
+	float:left;
+}
+.detailList p .subListLeft{
+	padding-left:20px;
+	width:110px;
+}
+.detailList p a:hover{
+	color:#ee4242;
+}
+/*---------------------sub轮播结构-----------------------*/
+
+.subSlide{
+	width:354px;
+	height:500px;
+	float:left;
+	overflow:hidden;
+	margin-right:7px;
+}
+.goodsDataRight{
+	width:595px;
+	height:500px;
+	float:right;	
+}
+.goodsDataRight li{
+	width:295px;
+	height:248px;
+	float:left;
+	background:#fff;
+	margin-right:5px;
+	margin-bottom:4px;
+}
+.goodsDataRight li img{
+	width:182px;
+	height:182px;
+}
+.goodsDataRight li .goodsNameC{
+	width:285px;
+	height:36px;
+	padding-left:10px;
+	background:url(img/franceBg.jpg) no-repeat 265px 17px;
+	line-height:48px;
+}
+.goodsDataRight li .goodsNameC a{
+	color:#333;
+}
+.goodsDataRight li .goodsNameC a:hover{
+	color:#ee4242;
+}
+.goodsDataRight li .goodsPriceC{
+	width:285px;
+	height:30px;
+	padding-left:10px;
+	color:#ee4242;
+	line-height:20px;
+	
+}
+.goodsDataRight li .goodsPriceC .countryNameC{
+	height:30px;
+	margin-right:10px;
+	color:#cacae1;
+	float:right;
+}
+.goodsDataRight .imgContainer{
+	padding-left:56px;
+}
+.goodsDataRight .noMarginR{
+	margin-right:0;
+}
+.goodsDataRight .noMarginB{
+	margin-bottom:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
