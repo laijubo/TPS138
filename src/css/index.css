@@ -1,14 +1,51 @@
 /*---------------------------banner---------------------------*/
 .banner{
 	width:100%;
-	height:450px;	
+	height:450px;
 }
 .bannerlist{
 	overflow:hidden;
 	height:450px;
+	position:relative;
 }
-.bannerlist li img{
+.bannerUl li img{
 	width:100%;
+}
+.bannerNav{
+	width:320px;
+	height:22px;
+	position:absolute;
+	left:40%;
+	top:400px;
+	border-radius:12px;
+	background:rgba(74,74,74,0.1);
+	padding-left:20px;
+}
+.bannerNav li{
+	width:12px;
+	height:12px;
+	border-radius:12px;
+	margin:5px 20px 0 0;
+	background:#fff;
+	float:left;
+}
+.bannerNav .ChangeColor{
+	background:#fa282d;
+	}
+.prev,.next {
+    position: absolute;
+    left: 50px;
+    top: 40%;
+    margin-top: -20px;
+    padding:30px 10px;;
+    background: rgba(0, 0, 0, .2);
+    font-size: 40px;
+    color: #fff;
+	cursor:pointer;
+}
+.next{
+    left: auto;
+    right: 50px;
 }
 /*---------------------------servicelist---------------------------*/
 .servicelist{
@@ -57,7 +94,8 @@
 /*---------------------------goodslist---------------------------*/
 
 /*---------------------新品上架轮播结构-----------------------*/
-.listProduct{
+
+.listProduct,.listProduct2{
 	width:1180px;
 	height:36px;
 	line-height:36px;
@@ -67,15 +105,59 @@
 	font-size:22px;
 	color:#222222;
 	padding-left:20px;
-	position:relative;
 	font-weight:600;
 }
-.newProductList{
-	width:1200px;
-	margin:0 auto;
+.lunboBtn,.lunboBtn2{
+	width:160px;
+	height:20px;
+	background:#ededed;
+	border-radius:10px;
+	margin-top:6px;
+	margin-left:920px;
+	float:right;
+	
+}
+
+.lunboBtn li,.lunboBtn2 li{
+	width:12px;
+	height:12px;
+	border-radius:100%;
+	margin-left:15px;
+	float:left;
+	background:#fff;
+	margin-top:3px;
+	border:1px solid #999;
+}
+
+.lunboBtn li.changeBtnColor,.lunboBtn2 li.changeBtnColor{
+	background:#ee4242;
+}
+.lunbogoods,.lunbogoods2{
+	width:1200px;margin:0 auto;
 	height:620px;
+	position:relative;
+	overflow:hidden;
 	margin-top:16px;
-	overflow:hidden;	
+}
+/*.lunbohotgoods{
+	width:1200px;margin:0 auto;
+	height:620px;
+	position:relative;
+	overflow:hidden;
+	margin-top:16px;
+}*/
+.newProductList{
+	width:7200px;
+	height:620px;
+	position:absolute;
+	left:0;
+	top:0;
+		
+}
+.newProductList > li{
+	float:left;
+	width:1200px;
+	height:620px;
 }
 .newProductList img{
 	width:232px;

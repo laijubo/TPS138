@@ -6,42 +6,19 @@
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script src="js/jquery-1.12.0.js"></script>
-	<script>
-		$(function(){
-			var $bannerlist = $(".bannerlist");
-			var atimer; 
-			var index = 0;
-			var len = $bannerlist.find("li").length;
-			
-			$bannerlist.on("mouseenter",function(){
-				clearInterval(timer);
-				}).on('mouseleave',function(){
-                	timer = setInterval(carousel,2000);
-            }).trigger('mouseleave');
-			function carousel(){
-                index++;
-                show();
-            }
-			function show(){
-                // 处理index值，使其实现循环轮播
-                if(index<0){
-                    index = len - 1;
-                }else if(index > len - 1){
-                    index = 0;
-                }
-                
-                $bannerlist.find('li').eq(index).show().siblings().hide();
-            }
-        });
-
-	</script>
+    <script src="js/index.js"></script>
 </head>
 <body>
-<!--*****************************************Header*****************************************-->
+<!--*****************************************Header*****************************************
 	<div class="header">
 		<div class="headCon">
 			<ul class="ctryMney">
-				<li class="country"><a href="#">中国</a><span class="arrow-down"></span></li>
+				<li class="country"><a href="#">中国</a><span class="arrow-down"></span><ul class="countrylist">
+                <li>U.S.A</li>
+                <li>한국</li>
+                <li>中国</li>
+                <li>香港</li>
+                <li>other</li></ul></li>
 				<li class="money"><a href="#">￥人民币</a><span class="arrow-down"></span></li>
 			</ul>
 			<div class="headRight">
@@ -50,7 +27,27 @@
 				<p class="perCenter"><a href="#">个人中心</a><span class="arrow-down"></p>
 			</div>
 		</div>
-	</div>
+	</div>-->
+    
+    <div class="header">
+    	<div class="headcon">
+        	<ul class="ctryMey">
+            <li><a href="#">中国</a><span class="arrow-down"></span>
+            	<ul class="countrylist"><li><a href="#">U.S.A</a><li><a href="#">한국</a><li><a href="#">香港</a><li><a href="#">中国</a><li>
+            	<li><a href="#">other</a><li>
+            	</ul>
+            </li>
+            <li class="rmb"><a href="#">￥人民币</a><span class="arrow-down"></span><ul class="moneylist"><li><a href="#">￥人民币</a><li><a href="#">￥人民币</a><li><a href="#">￥人民币</a><li><a href="#">￥人民币</a><li>
+            	</ul></li>
+            </ul>
+        	<ul class="headRight">
+            	<li class="rightList1"><a class="a1" href="#">登录</a><a class="a2" href="#">注册<a></li>
+                <li class="rightList2"><a href="#">我的关注(<span>0</span>)</a></li>
+                <li class="rightList3"><a href="#">个人中心</a><span class="arrow-down"></span><p><a href="#">我的订单</a></p></li>
+			</ul>
+        </div>
+    </div>
+    
 <!--*****************************************Logo*****************************************-->
 	<div class="logo">
     	<div class="logoCon">
@@ -66,11 +63,88 @@
             </div>
         </div>
 	</div>
-<!--***************************************Navigator***************************************-->
-	<div class="nav">
-    	<div class="navCon">
-        	<h2>全部商品分类</h2>
-            <ul class="navlist">
+<!--*******************************Navigator*****************-->
+    <div class="nav">
+    	<div class="navcon">
+        	<h3>全部商品分类
+            	<ul class="allGoodList">
+                	<li><a href="#">母婴用品</a>
+                    	<div><p><a href="#">奶粉</a></p>
+                        <p><a href="#">奶粉</a></p>
+                        <p><a href="#">奶粉</a></p>
+                        <p><a href="#">奶粉</a></p>
+                        <p><a href="#">奶粉</a></p>
+                        <p><a href="#">奶粉</a></p>
+                        <p><a href="#">奶粉</a></p>
+                        <p><a href="#">奶粉</a></p>
+                        <p><a href="#">奶粉</a></p>
+                        <p><a href="#">奶粉</a></p>
+                        <p><a href="#">奶粉</a></p></div>
+                    </li>
+                    <li><a href="#">美妆个护</a>
+                    	<div>
+                        <p><a href="#">化妆品</a></p>
+                        <p><a href="#">化妆品</a></p>
+                        <p><a href="#">化妆品</a></p>
+                        <p><a href="#">化妆品</a></p>
+                        <p><a href="#">化妆品</a></p>
+                        <p><a href="#">化妆品</a></p>
+                        <p><a href="#">化妆品</a></p>
+                        <p><a href="#">化妆品</a></p>
+                        </div>
+                    </li>
+                    <li><a href="#">体育户外用品</a>
+                    	<div>
+                        <p><a href="#">篮球</a></p>
+                        <p><a href="#">篮球</a></p>
+                        <p><a href="#">篮球</a></p>
+                        <p><a href="#">篮球</a></p>
+                        <p><a href="#">篮球</a></p>
+                        <p><a href="#">篮球</a></p>
+                        </div>
+                    </li>
+                    <li><a href="#">营养保健</a>
+                    	<div><a href="#">维生素</a></div>
+                    </li>
+                    <li><a href="#">食品酒水</a>
+                    	<div>
+                        <p><a href="#">红酒</a></p>
+                        <p><a href="#">红酒</a></p>
+                        <p><a href="#">红酒</a></p>
+                        <p><a href="#">红酒</a></p>
+                        </div>
+                    </li>
+                    <li><a href="#">家居日用</a>
+                    	<div>
+                        <p><a href="#">洗衣粉</a></p>
+                        <p><a href="#">洗衣粉</a></p>
+                        <p><a href="#">洗衣粉</a></p>
+                        <p><a href="#">洗衣粉</a></p>
+                        </div>
+                    </li>
+                    <li><a href="#">钟表首饰</a>
+                    	<div>
+                        <p><a href="#">瑞士手表</a></p>
+                        <p><a href="#">瑞士手表</a></p>
+                        <p><a href="#">瑞士手表</a></p>
+                        <p><a href="#">瑞士手表</a></p>
+                        <p><a href="#">瑞士手表</a></p>
+                        <p><a href="#">瑞士手表</a></p>
+                        </div>
+                    </li>
+                    <li><a href="#">数码电子</a>
+                    	<div>
+                        <p><a href="#">手机平板</a></p>
+                        <p><a href="#">手机平板</a></p>
+                        <p><a href="#">手机平板</a></p>
+                        <p><a href="#">手机平板</a></p>
+                        <p><a href="#">手机平板</a></p>
+                        <p><a href="#">手机平板</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </h3>
+            <ul class="mainNav">
             	<li><a href="#">商城首页</a></li>
                 <li class="newgoods"><a href="#">新品上市</a><img src="css/img/new.gif" class="newgif"/></li>
                 <li class="hotgoods"><a href="#">口碑特卖</a><img src="css/img/hot.gif" class="hotgif"/></li>
@@ -83,18 +157,34 @@
     </div>
 <!--**********************************Banner**********************************-->
 	<div class="banner">
-    	<ul class="bannerlist">
-        	<li><a href="#"><img src="img/bannerBg1.jpg"/></a></li>
-        	<li><a href="#"><img src="img/bannerBg2.jpg"/></a></li>
-            <li><a href="#"><img src="img/bannerBg3.jpg"/></a></li>
-            <li><a href="#"><img src="img/bannerBg4.jpg"/></a></li>
-            <li><a href="#"><img src="img/bannerBg5.jpg"/></a></li>
-        	<li><a href="#"><img src="img/bannerBg6.jpg"/></a></li>
-        	<li><a href="#"><img src="img/bannerBg7.jpg"/></a></li>
-            <li><a href="#"><img src="img/bannerBg8.jpg"/></a></li>
-            <li><a href="#"><img src="img/bannerBg9.jpg"/></a></li>
-            <li><a href="#"><img src="img/bannerBg10.jpg"/></a></li>
-        </ul>
+    	<div class="bannerlist">
+        	<ul class="bannerUl">
+                <li><a href="#"><img src="img/bannerBg1.jpg"/></a></li>
+                <li><a href="#"><img src="img/bannerBg2.jpg"/></a></li>
+                <li><a href="#"><img src="img/bannerBg3.jpg"/></a></li>
+                <li><a href="#"><img src="img/bannerBg4.jpg"/></a></li>
+                <li><a href="#"><img src="img/bannerBg5.jpg"/></a></li>
+                <li><a href="#"><img src="img/bannerBg6.jpg"/></a></li>
+                <li><a href="#"><img src="img/bannerBg7.jpg"/></a></li>
+                <li><a href="#"><img src="img/bannerBg8.jpg"/></a></li>
+                <li><a href="#"><img src="img/bannerBg9.jpg"/></a></li>
+                <li><a href="#"><img src="img/bannerBg10.jpg"/></a></li>   
+        	</ul>
+            <ul class="bannerNav">
+            	<li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            	<a class="prev">&lt;</a>
+        		<a class="next">&gt;</a>
+        </div>
     </div>
 <!--*******************************servicelist*******************************-->
 	<div class="servicelist">
@@ -115,152 +205,257 @@
     </div>
 <!--*******************************goodsList*******************************-->
 <!--************************新品上架轮播结构***********************-->
-	<h2 class="listProduct">新品上架</h2>
-    <ul class="newProductList">
-    	<li class="goodslist">
-        	<ul class="subGoodsList">
-            	<li><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct1.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-            </ul>
-        </li>
-        <li class="goodslist">
-        	<ul class="subGoodsList">
-            	<li><div><a href="#"><img src="newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct2.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-            </ul>
-        </li>
-        <li class="goodslist">
-        	<ul class="subGoodsList">
-            	<li><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct3.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-            </ul>
-        </li>
-        <li class="goodslist">
-        	<ul class="subGoodsList">
-            	<li><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct4.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-            </ul>
-        </li>
-        <li class="goodslist">
-        	<ul class="subGoodsList">
-            	<li><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct5.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-            </ul>
-        </li>
-    </ul>
-    <h2 class="listProduct listProductMargin">热卖推荐</h2>
-    <ul class="newProductList">
-    	<li class="goodslist">
-        	<ul class="subGoodsList">
-            	<li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct1.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-            </ul>
-        </li>
-        <li class="goodslist">
-        	<ul class="subGoodsList">
-            	<li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct2.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-            </ul>
-        </li>
-        <li class="goodslist">
-        	<ul class="subGoodsList">
-            	<li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct3.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-            </ul>
-        </li>
-        <li class="goodslist">
-        	<ul class="subGoodsList">
-            	<li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct4.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-            </ul>
-        </li>
-        <li class="goodslist">
-        	<ul class="subGoodsList">
-            	<li><div><a href="#"><img src="img/hotProduct5"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct5.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/571def7c59a6e_main.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-                <li class="noMargin"><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
-            </ul>
-        </li>
-    </ul>
+	<h2 class="listProduct">新品上架
+    	<ul class="lunboBtn">
+        	<li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </h2>
+    <div class="lunbogoods">
+    	<ul class="newProductList">
+            <li class="goodslist">
+                <ul class="subGoodsList">
+                    <li><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct1.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/newProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                </ul>
+            </li>
+            <li class="goodslist">
+                <ul class="subGoodsList">
+                    <li><div><a href="#"><img src="newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct2.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/newProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                </ul>
+            </li>
+            <li class="goodslist">
+                <ul class="subGoodsList">
+                    <li><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct3.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/newProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                </ul>
+            </li>
+            <li class="goodslist">
+                <ul class="subGoodsList">
+                    <li><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct4.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/newProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                </ul>
+            </li>
+            <li class="goodslist">
+                <ul class="subGoodsList">
+                    <li><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct5.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/newProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                </ul>
+            </li>
+    	</ul>
+    </div>
+    <h2 class="listProduct listProductMargin">热卖推荐
+    	<ul class="lunboBtn2">
+        	<li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </h2>
+    <div class="lunbogoods2">
+    	
+    	<ul class="newProductList">
+            <li class="goodslist">
+                <ul class="subGoodsList">
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                </ul>
+            </li>
+            <li class="goodslist">
+                <ul class="subGoodsList">
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                </ul>
+            </li>
+            <li class="goodslist">
+                <ul class="subGoodsList">
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                </ul>
+            </li>
+            <li class="goodslist">
+                <ul class="subGoodsList">
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                </ul>
+            </li>
+            <li class="goodslist">
+                <ul class="subGoodsList">
+                    <li><div><a href="#"><img src="img/hotProduct5"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct5.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/571def7c59a6e_main.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                </ul>
+            </li>
+    	</ul>
+    
+    </div>
+   <!-- <h2 class="listProduct2 listProductMargin">热卖推荐
+    	<ul class="lunboBtn2">
+        	<li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </h2>
+    <div class="lunbohotgoods">
+    	<ul class="newProductList">
+            <li class="goodslist">
+                <ul class="subGoodsList">
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct1.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                </ul>
+            </li>
+            <li class="goodslist">
+                <ul class="subGoodsList">
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct2.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                </ul>
+            </li>
+            <li class="goodslist">
+                <ul class="subGoodsList">
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct3.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                </ul>
+            </li>
+            <li class="goodslist">
+                <ul class="subGoodsList">
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct4.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                </ul>
+            </li>
+            <li class="goodslist">
+                <ul class="subGoodsList">
+                    <li><div><a href="#"><img src="img/hotProduct5"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct5.jpg"></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/571def7c59a6e_main.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                    <li class="noMargin"><div><a href="#"><img src="img/hotProduct5.jpg"/></a></div><p class="goodsName"><a href="#">天福堂 天品源青橄榄酵素/人...</a></p><p class="goodsPrice">￥299.94<span class="countryName">法国</span></p></li>
+                </ul>
+            </li>
+    	</ul>
+    </div>-->
 <!--************************产品列表***********************-->
     <h2 class="listProduct listProductMargin">母婴用品<span><a href="#">更多商品></a></span></h2>
     <div class="goodsData">
@@ -434,6 +629,7 @@
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
 

@@ -1,0 +1,80 @@
+.register{
+	width:1200px;
+	height:38px;
+	margin:0 auto;
+	line-height:38px;
+	font-size:18px;
+	font-weight:600;
+	margin-top:40px;
+	margin-bottom:20px;
+	color:#333;
+	border-bottom:2px solid #888;
+}
+.regLogin{
+	width:1200px;
+	height:535px;
+	margin:0 auto;	
+}
+.reg{
+	float:left;
+	width:540px;
+	height:535px;
+	padding-left:60px;
+	border-right:1px solid #ccc;
+}
+.regtitle{
+	height:70px;
+	line-height:70px;
+	color:#666;
+}
+.emailtxt,.passwordtxt{
+	height:40px;
+	width:202px;
+	border:1px solid #cccccc;
+	padding-left:45px;
+	margin-bottom:43px;
+	
+}
+.emailtxt{
+ background:url(img/youxiang.jpg) no-repeat 15px 15px #fff;
+}
+.passwordtxt{
+ background:url(img/mimasuo.jpg) no-repeat 15px 10px #fff;
+}
+.redLeft .btnsubmit{
+	height:40px;
+	width:111px;
+	color:#fff;
+	background:#d22215;
+	text-align:center;
+	line-height:40px;
+	font-size:14px;
+	margin-bottom:50px;
+}
+.redLeft p{
+	height:12px;
+	line-height:12px;
+}
+.redLeft p a{
+	color:#497fb1;
+	font-size:12px;
+}
+.login{
+	float:left;
+	hieght:535px;
+	padding-left:60px;
+}
+.login p{
+	height:12px;
+	line-height:12px;
+	margin:5px 0 43px;
+}
+.login .btnreg{
+	width:141px;
+	height:40px;
+	color:#fff;
+	background:#2c3444;
+	text-align:center;
+	line-height:40px;
+	font-size:14px;
+}

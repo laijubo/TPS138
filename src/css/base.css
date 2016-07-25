@@ -7,7 +7,7 @@ img{border:0;display:block;}
 h1,h2,h3,h4,h5,h6,b{font-weight:100;}
 i{font-style:normal;}
 input{border:none;}
-/*---------------------------header---------------------------*/
+/*---------------------------header------------------------
 .header{
 	width:100%;
 	height:36px;
@@ -39,10 +39,23 @@ input{border:none;}
 	padding-left:46px;
 	margin-right:6px;
 	background:url(img/china.jpg) no-repeat 22px 12px;
+	position:relative;
 }
+.countrylist{
+	position:absolute;
+	left:0;
+	top:40px;
+	z-index:2;
+}
+.ctryMney .country:hover{
+	background:url(img/china.jpg) no-repeat 22px 12px #fff;
+	}
 .ctryMney .money{
 	width:60px;
 	padding-left:26px;
+}
+.ctryMney .money:hover{
+	background:#fff;
 }
 .arrow-down{
 	width: 0;
@@ -102,22 +115,148 @@ input{border:none;}
 }
 .perCenter a{
 	color:#333333;
-	width:48px;
+	width:58px;
 	height:36px;
 	display:block;
-	padding:0 20px 0 10px;	
+	padding:0 10px 0 10px;	
 }
 .perCenter a:hover{
 	background:#FFF;
 	color:#ed4242;
 	padding:0 20px 0 10px;;
+}---*/
+.header{
+	width:100%;
+	height:36px;
+	border-bottom:1px solid #999;
+}
+.headcon{
+	width:1200px;
+	height:36px;
+	
+	margin:0 auto;
+}
+.ctryMey{
+	float:left;
+	width:;
+	
+}
+.ctryMey a{
+	color:#333;
+}
+.ctryMey a:hover{
+	color:#ed4242;
+}
+.ctryMey > li{
+	float:left;
+	margin-right:15px;
+	width:75px;
+	height:36px;
+	padding-left:10px;
+	position:relative;
+	
+	text-align:center;
+	line-height:36px;
+}
+.ctryMey > li:hover{
+	background:#fff;
+}
+.countrylist{
+	width:90px;
+	position:absolute;
+	left:0;
+	top:36px;
+	background:#fff;
+	line-height:20px;
+	display:none;
+}
+.countrylist >li{
+	background:url(img/usa.jpg) no-repeat 5px 6px;
+}
+.moneylist{
+	background:#fff;
+	position:absolute;
+	left:0;
+	top:36px;
+	width:90px;
+	display:none;
+}
+.moneylist >li{
+	line-height:20px;
+}
+.rmb .arrow-down{
+	
+	right:5px;
+	
+}
+.arrow-down{
+	width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid #bbbbbb;
+	position:absolute;
+	right:15px;
+	top:17px;
+}
+.headRight{
+	float:right;height:36px;
+	
+	line-height:36px;
+}
+.headRight a{
+	color:#333;
+}
+.headRight a:hover{
+	color:#ed4242;
+}
+.headRight > li{
+	float:left;
+	width:100px;
+	height:36px;
+
+}
+.headRight .rightList1 a{
+	color:#ed4242;
+	float:left;margin-left:17px;
+}
+.headRight .rightList1{
+	height:12px;margin-top:12px;background:url(img/regBg.jpg) repeat-y center;
+	line-height:12px;
+}
+.headRight .rightList1 a:hover{
+	text-decoration:underline;
+}
+.headRight .rightList2{
+	background:url(img/focusBg.jpg) no-repeat 5px 13px;
+	text-align:center;
+}
+
+.headRight .rightList2:hover{
+	background:url(img/focusBgRed.jpg) no-repeat 5px 13px;
+}
+.headRight .rightList3{
+	position:relative;
+	text-align:center;
+}
+.headRight .rightList3:hover{
+	background:#fff;
+	color:#ed4242;
+}
+.headRight .rightList3 p{
+	width:100px;
+	position:absolute;
+	left:0;
+	top:36px;
+	background:#fff;
+	display:none;
 }
 /*---------------------------logo---------------------------*/
 .logo{
 	width:100%;
 	height:110px;
 	background:#FFF;
-	z-index:2;
+	
 }
 .logoCon{
 	width:1200px;
@@ -184,7 +323,17 @@ span.perArrow{
 	padding-right:23px;
 	color:#fff;
 }
-/*---------------------------Navigator---------------------------*/
+/*---------------------------Navigator---------------------------
+.allGoodsList{
+	position:absolute;
+	width:160px;
+	left:0;
+	top:42px;
+}
+.allGoodsList > li{
+	width:160px;
+	height:42px;
+}
 .nav{
 	width:100%;
 	height:42px;
@@ -206,6 +355,7 @@ span.perArrow{
 	font-size:14px;
 	padding-left:32px;
 	background:url(img/goodsBg.jpg) no-repeat 132px 19px #ed4242;
+	position:relative;
 }
 .navCon .navlist{
 	float:left;
@@ -237,6 +387,70 @@ span.perArrow{
 .navCon .navlist li a:hover{
 	background-color:#404040;
 	padding:15px 36px;
+}*/
+.nav{
+	width:100%;height:42px;
+	background:#1e1e1e;	
+}
+.navcon{
+	width:1200px;height:42px;margin:0 auto;
+	line-height:42px;
+}
+.navcon h3{
+	float:left;
+	width:160px;
+	text-align:center;
+	background:url(img/goodsBg.jpg) no-repeat 132px 19px #ed4242;
+	color:#fff;
+	position:relative;
+}
+.navcon .allGoodList{
+	width:160px;
+	position:absolute;
+	left:0;
+	top:42px;
+	background:#fff;
+	z-index:10;
+	display:none;
+	
+}
+.navcon .allGoodList a{
+	color:#333;
+}
+.navcon .allGoodList li{
+	border-bottom:1px dashed #CCCCCC;
+	height:42px;
+}
+.navcon .allGoodList li div{
+	position:absolute;
+	left:160px;
+	top:0;
+	background:#fff;
+	width:600px;
+	display:none;
+}
+.mainNav{
+	float:left;
+	height:42px;
+}
+.mainNav li{
+	float:left;
+}
+.mainNav li a{
+	padding:0 36px;
+	color:#ffffff;
+	font-size:14px;
+}
+.mainNav li:hover{
+	background-color:#404040;
+}
+.newgoods,.hotgoods{
+	position:relative;
+}
+.newgif,.hotgif{
+	position:absolute;
+	right:20px;
+	top:-5px;
 }
 /*---------------------------footer---------------------------*/
 .footer{

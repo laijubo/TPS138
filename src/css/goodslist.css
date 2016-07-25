@@ -1,0 +1,164 @@
+.listnav{
+	width:1200px;
+	height:28px;
+	margin:12px auto 0;
+	padding-left:22px;
+	background:url(../css/img/index.jpg) no-repeat 2px 2px;
+	line-height:28px;
+	
+}
+.listnav a{
+	color:#333;
+}
+.listnav a:hover{
+	color:#ee4242;
+}
+.listResult{
+	width:1200px;
+	height:32px;
+	line-height:32px;
+	color:#999;
+	margin:0 auto;
+	border-bottom:1px solid #222222;
+}
+.listResult span{
+	color:#666666;
+	font-weight:600;
+	
+}
+
+
+
+.everygoods{
+	width:1200px;
+	height:135px;
+	margin:0 auto 40px;
+}
+.everygoods p{
+	height:44px;
+	
+	color:#333;
+	border-bottom:1px solid #CCC;
+	font-weight:600;
+}
+.everygoods p a{
+	color:#777;
+	font-weight:100;
+	float:left;
+	padding:5px;
+	margin:0 20px;
+	line-height:12px;
+	margin-top:12px;
+}
+.everygoods p a:hover{
+	border:1px solid #ee4242;
+	color:#ee4242;
+}
+.everygoods p .firstborder{
+	border:1px solid #ee4242;
+	color:#ee4242;
+	background-image:none;
+	
+}
+.everygoods p .firstborder:hover{
+	background-image:none;
+}
+.backgroundArrow a{
+	width:60px;
+	height:12px;
+	margin:0;
+	text-align:center;
+	
+	background:url(../css/img/arrow.jpg) no-repeat 50px 6px;
+}
+.backgroundArrow a:hover{
+	background:url(../css/img/arrowred.jpg) no-repeat 50px 6px;
+}
+.everygoods p span{
+	float:left;
+	line-height:44px;
+}
+
+
+
+
+.listpicture{
+	width:1200px;
+	margin:0 auto;
+	padding-bottom:20px;
+	
+	border-bottom:1px solid #ccc;
+	overflow:hidden;
+}
+.alllistpicture{
+	width:1200px;
+	float:left;
+}
+.alllistpicture li{
+	width:236px;
+	height:300px;
+	float:left;
+	margin: 0 5px 10px 0;
+}
+.alllistpicture .nomargin{
+	margin-right:0;
+}
+.alllistpicture li img{
+	width:236px;
+	height:236px;
+}
+.alllistpicture li .goodsName{
+	width:226px;
+	height:34px;
+	padding-left:10px;
+	background:red;
+	line-height:50px;
+	background:#fff;	
+}
+.alllistpicture li .goodsName a{
+		color:#333333;
+}
+.alllistpicture li .goodsName a:hover{
+		color:#ee4242;
+}
+.alllistpicture li .goodsPrice{
+	width:226px;
+	height:30px;
+	padding-left:10px;
+	color:#ee4242;
+	line-height:20px;
+	background:#fff;
+}
+.alllistpicture li .goodsPrice .countryName{
+	height:30px;
+	margin-right:10px;
+	color:#cacae1;
+	float:right;
+}
+.pageBtn{
+	width:670px;
+	height:24px;
+	line-height:24px;
+	margin:18px auto 47px;
+	text-align:center;
+	padding-left:530px;
+}
+.pageBtn a{
+	float:left;
+	width:24px;
+	height:20px;
+	color:#333;
+	border:1px solid #CCC;
+	line-height:20px;
+	margin-right:5px;
+}
+.pageBtn a:hover{
+	background:#ee4242;
+	border:1px solid #ee4242;
+	color:#fff;
+}
+.pageBtn .firstPage{
+	background:#ee4242;
+	border:1px solid #ee4242;
+	color:#fff;
+}
